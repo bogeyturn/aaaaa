@@ -11,9 +11,17 @@ function backendBase(): string {
   return `${window.location.origin}/proxy/local-api/`;
 }
 
+const withProtocol = (url: string) =>
+  /^https?:\/\//.test(url) ? url : `https://${url}`;
+
 const proxyIp = () =>
   import.meta.server
-    ? (process.env.LOCAL_SERVER_ORIGIN ?? "http://127.0.0.1:3000")
+    ? (process.env.NUXT_PUBLIC_SITE_ORIGIN ??
+      (process.env.VERCEL_URL
+        ? withProtocol(process.env.VERCEL_URL)
+        : undefined) ??
+      process.env.LOCAL_SERVER_ORIGIN ??
+      "http://127.0.0.1:3000")
     : window.location.origin;
 
 export function getSession() {
