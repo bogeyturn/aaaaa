@@ -19,6 +19,8 @@
     "api_scraped_wasm.d.ts"
   ],
   "sideEffects": [
+    "./api_scraped_wasm.js",
+    "./api_scraped_wasm_bg.wasm",
     "./api_scraped_wasm_bg.js"
   ]
 }
