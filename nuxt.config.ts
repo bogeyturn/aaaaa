@@ -1,8 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import topLevelAwait from "vite-plugin-top-level-await";
+import wasm from "vite-plugin-wasm";
+
 export default defineNuxtConfig({
     compatibilityDate: "2025-07-15",
     vite: {
-        plugins: [require("vite-plugin-wasm")()],
+        build: {
+            target: "esnext",
+        },
+        plugins: [wasm(), topLevelAwait()],
     },
     ssr: true,
     nitro: {
