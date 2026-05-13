@@ -1,0 +1,17 @@
+{
+  "name": "api-scraped-wasm",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "api_scraped_wasm_bg.wasm",
+    "api_scraped_wasm.js",
+    "api_scraped_wasm_bg.js",
+    "api_scraped_wasm.d.ts"
+  ],
+  "main": "api_scraped_wasm.js",
+  "types": "api_scraped_wasm.d.ts",
+  "sideEffects": [
+    "./api_scraped_wasm.js",
+    "./snippets/*"
+  ]
+}
