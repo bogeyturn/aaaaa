@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         },
         plugins: [wasm(), topLevelAwait()],
     },
-    ssr: false,
+    ssr: true,
     nitro: {
         preset: "vercel", // or 'vercel', 'cloudflare', etc.
     },
