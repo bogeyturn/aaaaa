@@ -1,4 +1,4 @@
-import { WasmSession } from "exx";
+import { WasmSession } from "api-scraped-wasm";
 import { getCookie } from "~/utils/cookie";
 
 export const getSecret = () => getCookie("EX_COOKIE") ?? "";

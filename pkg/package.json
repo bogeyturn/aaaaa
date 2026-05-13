@@ -2,16 +2,22 @@
   "name": "api-scraped-wasm",
   "type": "module",
   "version": "0.1.0",
+  "main": "./api_scraped_wasm_bg.js",
+  "module": "./api_scraped_wasm_bg.js",
+  "types": "./api_scraped_wasm.d.ts",
+  "exports": {
+    ".": {
+      "types": "./api_scraped_wasm.d.ts",
+      "import": "./api_scraped_wasm_bg.js",
+      "default": "./api_scraped_wasm_bg.js"
+    }
+  },
   "files": [
     "api_scraped_wasm_bg.wasm",
-    "api_scraped_wasm.js",
     "api_scraped_wasm_bg.js",
     "api_scraped_wasm.d.ts"
   ],
-  "main": "api_scraped_wasm.js",
-  "types": "api_scraped_wasm.d.ts",
   "sideEffects": [
-    "./api_scraped_wasm.js",
-    "./snippets/*"
+    "./api_scraped_wasm_bg.js"
   ]
 }
