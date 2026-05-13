@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     },
     ssr: true,
     nitro: {
-        preset: "node-server", // or 'vercel', 'cloudflare', etc.
+        preset: "vercel", // or 'vercel', 'cloudflare', etc.
     },
     eslint: {},
     devtools: {enabled: true},
