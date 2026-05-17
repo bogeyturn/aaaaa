@@ -5,7 +5,7 @@ export const getSecret = () => getCookie("EX_COOKIE") ?? "";
 let sessionInstance: WasmSession | null = null;
 
 function backendBase(): string {
-  return "https://ad.exhint.de";
+  return "https://api.exhint.de";
 }
 
 const withProtocol = (url: string) =>
